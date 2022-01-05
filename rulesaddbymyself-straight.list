@@ -1,9 +1,9 @@
-DOMAIN,api.m.jd.com
-DOMAIN,api.m.jd.com 
-DOMAIN,wlmonitor.m.jd.com
-DOMAIN,policy.jd.com
-DOMAIN,itsdata.map.baidu.com
+DOMAIN-SUFFIX,api.m.jd.com
+DOMAIN-SUFFIX,api.m.jd.com 
+DOMAIN-SUFFIX,wlmonitor.m.jd.com
+DOMAIN-SUFFIX,policy.jd.com
+DOMAIN-SUFFIX,itsdata.map.baidu.com
 DOMAIN-SUFFIX,mac69.com
-DOMAIN,m.ctrip.com
-DOMAIN,f10.baidu.com
-DOMAIN,ulogs.umeng.com
+DOMAIN-SUFFIX,m.ctrip.com
+DOMAIN-SUFFIX,f10.baidu.com
+DOMAIN-SUFFIX,ulogs.umeng.com
