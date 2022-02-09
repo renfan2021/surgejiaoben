@@ -1,5 +1,5 @@
-#!name=Ad rewrite rules, copy Nobyda
-#!desc=This module integrate lhie1 and ConnersHua, and some self use rewrite rules
+#!name=Ad rewrite rules copy Nobyda
+#!desc=Ad rewrite rules copy Nobyda
 
 [URL Rewrite]
 
