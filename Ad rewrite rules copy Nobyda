@@ -5,6 +5,7 @@
 
 # Update time: 2021.8.26
 # Copy time: 2022.2.9
+# Latest Commits on Jan 26, 2022
 
 ^https?:\/\/interface\.music\.163\.com\/eapi\/ad - reject
 ^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
