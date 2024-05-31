@@ -1,0 +1,94 @@
+[General]
+# > 日志级别
+loglevel = notify
+show-error-page-for-reject = true
+# > 允许Wi-Fi访问
+allow-wifi-access = false
+# > All Hybrid 网络并发
+all-hybrid = false
+# > IPv6 支持（默认关闭）
+ipv6 = false
+# > 测试超时（秒）
+test-timeout = 5
+# > Internet 测试 URL
+internet-test-url = http://www.baidu.com
+# > 代理测速 URL
+proxy-test-url = http://www.google.com/generate_204
+# > GeoIP数据库
+geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+# > 排除简单主机名
+exclude-simple-hostnames = true
+# > DNS 服务器
+dns-server = 223.5.5.5, 119.29.29.29
+encrypted-dns-server = quic://dns.alidns.com
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
+# > 从 /etc/hosts 读取 DNS 记录
+read-etc-hosts = true
+# > 远程控制器
+http-api-web-dashboard = true
+use-default-policy-if-wifi-not-primary = false
+# > 跳过代理
+skip-proxy = 192.168.0.0/24, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.1, localhost, *.local
+# > Always Real IP
+always-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# > Surge VIF
+# tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+# tun-included-routes = 192.168.1.12/32
+# > 禁用 GEOIP 自动更新
+disable-geoip-db-auto-update = true
+
+[Proxy]
+🌐 全球直连 = direct
+
+[Proxy Group]
+# > 策略组（下面的节点信息需与外部节点对应，若删除了外部节点里的节点，那么在策略组里也要删除。）
+✈️ 节点选择 = select, 💎 自动测速, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+📲 电报信息 = select, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+📹 油管视频 = select, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+🍿 国外媒体 = select, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+🍔 国内媒体 = select, 🌐 全球直连, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+🍟 OpenAI = select, 🌐 全球直连, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+Ⓜ️ 微软服务 = select, 🌐 全球直连, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+🍎 苹果服务 = select, 🌐 全球直连, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+🎮 游戏平台 = select, 🌐 全球直连, ✈️ 节点选择, 🇭🇰 香港节点, 🇺🇲 美国节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇨🇳 台湾节点, 🚀 手动选择
+# > 外部节点
+🇭🇰 香港节点 = smart, include-other-group=🚀 手动选择, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=(🇭🇰)|(港)|(Hong)|(HK)
+🇨🇳 台湾节点 = smart, include-other-group=🚀 手动选择, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=(🇨🇳)|(台)|(Tai)|(TW)
+🇺🇲 美国节点 = smart, include-other-group=🚀 手动选择, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=(🇺🇸)|(美)|(States)|(US)
+🇯🇵 日本节点 = smart, include-other-group=🚀 手动选择, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=(🇯🇵)|(日)|(Japan)|(JP)
+🇸🇬 新加坡节点 = smart, include-other-group=🚀 手动选择, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0, policy-regex-filter=(🇸🇬)|(新)|(Singapore)|(SG)
+🚀 手动选择 = select, policy-path=https://uttjhu.xyz/?L1N1YnNjcmlwdGlvbi9TdXJnZU5vZGVMaXN0P3NpZD01ODg2NyZ0b2tlbj1lcHJuaXk2dTR4bCZtbT02ODk1MyZhM2MzODc3ODg5OWM0ZTQ5OWFjYjg5ZTVjNTA=, update-interval=86400, no-alert=0, hidden=0, include-all-proxies=0
+💎 自动测速 = url-test, policy-path=https://uttjhu.xyz/?L1N1YnNjcmlwdGlvbi9TdXJnZU5vZGVMaXN0P3NpZD01ODg2NyZ0b2tlbj1lcHJuaXk2dTR4bCZtbT02ODk1MyZhM2MzODc3ODg5OWM0ZTQ5OWFjYjg5ZTVjNTA=, update-interval=86400, interval=300, tolerance=150, hidden=true
+
+[Rule]
+# 防止应用循环请求
+IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+# > 苹果服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple_All_No_Resolve.list,🍎 苹果服务
+# > OpenAI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OpenAI/OpenAI_Resolve.list,🍟 OpenAI
+# > 微软服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,Ⓜ️ 微软服务
+# > 社交平台
+RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.Telegram.list,📲 电报信息
+# > 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,🎮 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list,🎮 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,🎮 游戏平台
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,🎮 游戏平台
+# > 流媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,📹 油管视频
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,🍔 国内媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia_All_No_Resolve.list,🍿 国外媒体
+# > Proxy
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_All_No_Resolve.list,✈️ 节点选择
+# > 局域网地址
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list,🌐 全球直连
+# > China ASN
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaASN/ChinaASN_Resolve.list,🌐 全球直连
+# > DNS 查询失败走 Final 规则
+FINAL,✈️ 节点选择,dns-failed
+
+[MITM]
+ca-passphrase = B4117E92
+ca-p12 = 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
